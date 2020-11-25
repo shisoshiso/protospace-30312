@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= @name %> さんの情報
+      </h2>
+      <table class="table">
+        <tbody>
+        <% @prototypes.each do |prototype| %>
+          <tr>
+            <th class="table__col1">名前</th>
+            <td class="table__col2"><%= prototype.user.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">プロフィール</th>
+            <td class="table__col2"><%= prototype.user.profile %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">所属</th>
+            <td class="table__col2"><%= prototype.user.occupation %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">役職</th>
+            <td class="table__col2"><%= prototype.user.position %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= @name %> さんのプロトタイプ
+      </h2>
+      <div class="user__card">
+        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+        <%= render partial: "prototypes/prototype", collection: @prototypes %>
+      </div>
+    </div>
+  </div>
+</div>
