@@ -6,24 +6,22 @@
       </h2>
       <table class="table">
         <tbody>
-        <% @prototypes.each do |prototype| %>
           <tr>
             <th class="table__col1">名前</th>
-            <td class="table__col2"><%= prototype.user.name %></td>
+            <td class="table__col2"><%= @user.name %></td>
           </tr>
           <tr>
             <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= prototype.user.profile %></td>
+            <td class="table__col2"><%= @user.profile %></td>
           </tr>
           <tr>
             <th class="table__col1">所属</th>
-            <td class="table__col2"><%= prototype.user.occupation %></td>
+            <td class="table__col2"><%= @user.occupation %></td>
           </tr>
           <tr>
             <th class="table__col1">役職</th>
-            <td class="table__col2"><%= prototype.user.position %></td>
+            <td class="table__col2"><%= @user.position %></td>
           </tr>
-          <% end %>
         </tbody>
       </table>
       <h2 class="page-heading">
